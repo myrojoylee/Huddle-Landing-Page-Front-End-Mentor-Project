@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  text-align: center;
+  background: url("images/bg-mobile.svg"), hsl(257, 40%, 49%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  min-width: 377px;
+  max-width: 1440px;
+
+  padding: 1rem;
+
+  /* border: 1px solid white; */
+}
+
+@media (max-width: 377px) {
+  body {
+    background-size: 377px;
+  }
+}
+
+header {
+  text-align: left;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding: 3rem 2rem 0.5rem;
+}
+
+.logo {
+  width: 150px;
+  padding: 1rem 0.5rem 0;
+}
+
+.mockups {
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.main-container {
+  display: grid;
+  place-content: center;
+  margin: 3.5rem 0;
+  /* border: 1px solid white; */
+  max-height: 800px;
+}
+
+.description {
+  padding: 0 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.register {
+  margin: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: hsl(257, 40%, 49%);
+  background-color: white;
+  width: 200px;
+  height: 40px;
+  border: 1px solid dimgrey;
+  border-radius: 2rem;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+}
+
+.register:hover {
+  background-color: hsl(300, 69%, 71%);
+  color: white;
+  cursor: pointer;
+}
+
+.social {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  grid-template-columns: 40px 40px 40px;
+}
+
+.fa-brands {
+  display: grid;
+  margin: 2.5rem 0;
+  place-content: center center;
+  border: 1px solid white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.fa-brands:hover {
+  border: 1px solid hsl(300, 69%, 71%);
+  color: hsl(300, 69%, 71%);
+  cursor: pointer;
+}
+
+footer {
+  font-size: 0.75rem;
+}
+
+@media (min-width: 800px) {
+  body {
+    background: url("images/bg-desktop.svg"), hsl(257, 40%, 49%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-template-rows: 1fr 7fr;
+    grid-template-areas:
+      "header"
+      "main-container";
+  }
+
+  .logo {
+    width: 275px;
+    padding: 2rem 0 1rem 4rem;
+  }
+
+  .mockups {
+    padding: 0 3rem;
+  }
+
+  h1 {
+    padding: 3rem 1rem 1.5rem 1rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "left right";
+    text-align: left;
+  }
+
+  .description {
+    padding-right: 2.25rem;
+    font-size: 1.1rem;
+  }
+
+  .register {
+    font-size: 1.25rem;
+    height: 60px;
+  }
+
+  .fa-brands {
+    padding: 0;
+    margin: 0;
+    width: 50px;
+    height: 50px;
+    font-size: 1.75rem;
+  }
+
+  .social {
+    margin: 0;
+    padding-top: 150px;
+    place-content: end end;
+    grid-template-columns: 60px 60px 60px;
+  }
+}
